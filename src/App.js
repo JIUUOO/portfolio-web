@@ -12,7 +12,7 @@ function App() {
   };
 
   useEffect(() => {
-    console.log(currSlide);
+    // console.log(currSlide);
     window.addEventListener("click", listener);
 
     return () => {
