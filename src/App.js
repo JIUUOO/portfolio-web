@@ -1,14 +1,18 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 import "./App.css";
+import { GlobalContext } from "./context";
 import Home from "./pages/home";
 import Skills from "./pages/skills";
 
-const listener = (e) => {
-  console.log(e);
-};
-
 function App() {
+  const { currSlide, setCurrSlide } = useContext(GlobalContext);
+
+  const listener = async (e) => {
+    await setCurrSlide((currSlide + 1) % 2);
+  };
+
   useEffect(() => {
+    console.log(currSlide);
     window.addEventListener("click", listener);
 
     return () => {
@@ -18,8 +22,8 @@ function App() {
 
   return (
     <React.StrictMode>
-      <Home />
-      <Skills />
+      <Home currSlide={currSlide} />
+      <Skills currSlide={currSlide} />
     </React.StrictMode>
   );
 }
