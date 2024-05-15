@@ -23,7 +23,7 @@ export default function Home(props) {
               입니다.
               <ul className="list-disc list-inside">
                 <li>
-                  (2024.01~03) 🏢 배달 어플 회사에서 BO를 이용한 점주 및 고객
+                  (2024.01~02) 🏢 배달 어플 회사에서 BO를 이용한 점주 및 고객
                   데이터 관리 근무 경험이 있습니다.
                 </li>
                 <li>
