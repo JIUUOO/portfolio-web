@@ -1,3 +1,5 @@
+import Footer from "../../components/footer";
+
 export default function Home(props) {
   return (
     <div className={props.currSlide === 0 ? "" : "hidden"}>
@@ -26,7 +28,7 @@ export default function Home(props) {
                 </li>
                 <li>
                   (2024.03 ~) 👨‍🏫 로봇코딩 학원에서 C언어 및 Python 코칭을 하는
-                  보조교사로 근무하고 있습니다.{" "}
+                  보조교사로 근무하고 있습니다.
                 </li>
                 <li>
                   (2024.03 ~) 👨‍🏫 영어 학원에서 중고등부 보조교사로 근무하고
@@ -43,9 +45,7 @@ export default function Home(props) {
               에너지를 기르고 있습니다.
             </p>
           </div>
-          <div className="col-span-12 text-center italic">
-            <p className="text-xs">클릭하여 다음 슬라이드로 이동하세요</p>
-          </div>
+          <Footer />
         </div>
       </div>
     </div>

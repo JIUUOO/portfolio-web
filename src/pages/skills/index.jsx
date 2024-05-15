@@ -1,3 +1,5 @@
+import Footer from "../../components/footer";
+
 export default function Skills(props) {
   return (
     <div className={props.currSlide === 1 ? "" : "hidden"}>
@@ -35,9 +37,7 @@ export default function Skills(props) {
               <li>Arduino</li>
             </ul>
           </div>
-          <div className="col-span-12 text-center italic">
-            <p className="text-xs">클릭하여 다음 슬라이드로 이동하세요</p>
-          </div>
+          <Footer />
         </div>
       </div>
     </div>

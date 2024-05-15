@@ -1,8 +1,10 @@
+import Footer from "../../components/footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithub,
   faLinkedinIn,
   faGoogle,
+  faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 
 export default function Contact(props) {
@@ -21,8 +23,19 @@ export default function Contact(props) {
                 </a>
               </li>
               <li className="py-1">
-                <a href="linkedin.com/in/jiwoo-min-3836a6300" target="_blank">
+                <a
+                  href="https://linkedin.com/in/jiwoo-min-3836a6300"
+                  target="_blank"
+                >
                   <FontAwesomeIcon icon={faLinkedinIn} /> LinkedIn
+                </a>
+              </li>
+              <li className="py-1">
+                <a
+                  href="https://youtube.com/@nninjiuuoo?si=hq_XSa7yhb7i7JRh"
+                  target="_blank"
+                >
+                  <FontAwesomeIcon icon={faYoutube} /> Youtube
                 </a>
               </li>
               <li className="py-1">
@@ -32,9 +45,7 @@ export default function Contact(props) {
               </li>
             </ul>
           </div>
-          <div className="col-span-12 text-center italic">
-            <p className="text-xs">클릭하여 다음 슬라이드로 이동하세요</p>
-          </div>
+          <Footer />
         </div>
       </div>
     </div>

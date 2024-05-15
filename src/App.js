@@ -4,6 +4,7 @@ import { GlobalContext } from "./context";
 import Home from "./pages/home";
 import Skills from "./pages/skills";
 import Contact from "./pages/contact";
+import Footer from "./components/footer";
 
 const PAGE_COUNT = 3;
 
@@ -11,11 +12,16 @@ function App() {
   const { currSlide, setCurrSlide } = useContext(GlobalContext);
 
   const listener = async (e) => {
-    await setCurrSlide((currSlide + 1) % PAGE_COUNT);
+    // console.dir(e.srcElement.localName);
+    // when user clicks a link, slide remains
+    if (e.srcElement.localName !== "a") {
+      await setCurrSlide((currSlide + 1) % PAGE_COUNT);
+    }
   };
 
   useEffect(() => {
     // console.log(currSlide);
+
     window.addEventListener("click", listener);
 
     return () => {
@@ -25,9 +31,11 @@ function App() {
 
   return (
     <React.StrictMode>
-      <Home currSlide={currSlide} />
-      <Skills currSlide={currSlide} />
-      <Contact currSlide={currSlide} />
+      <div>
+        <Home currSlide={currSlide} />
+        <Skills currSlide={currSlide} />
+        <Contact currSlide={currSlide} />
+      </div>
     </React.StrictMode>
   );
 }
