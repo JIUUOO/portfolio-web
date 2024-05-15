@@ -1,3 +1,10 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faGithub,
+  faLinkedinIn,
+  faGoogle,
+} from "@fortawesome/free-brands-svg-icons";
+
 export default function Contact(props) {
   return (
     <div className={props.currSlide === 2 ? "" : "hidden"}>
@@ -6,21 +13,21 @@ export default function Contact(props) {
           <div className="col-span-12">
             <h1 className="text-3xl sm:text-5xl font-bold">같이 소통해요</h1>
           </div>
-          <div className="col-span-12 font-semibold">
+          <div className="col-span-12 text-lg">
             <ul>
-              <li>
+              <li className="py-1">
                 <a href="https://github.com/JIUUOO" target="_blank">
-                  <svg href="../../github-mark.svg" alt="fuck"></svg> GitHub
+                  <FontAwesomeIcon icon={faGithub} /> GitHub
                 </a>
               </li>
-              <li>
+              <li className="py-1">
                 <a href="linkedin.com/in/jiwoo-min-3836a6300" target="_blank">
-                  LinkedIn
+                  <FontAwesomeIcon icon={faLinkedinIn} /> LinkedIn
                 </a>
               </li>
-              <li>
+              <li className="py-1">
                 <a href="mailto:nninjiuuoo@gmail.com" target="_blank">
-                  📧 Email
+                  <FontAwesomeIcon icon={faGoogle} /> Email
                 </a>
               </li>
             </ul>
