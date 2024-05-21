@@ -17,7 +17,6 @@ export default function Skills(props) {
                 <li>HTML</li>
                 <li>CSS</li>
                 <li>JavaScript</li>
-                <li>Node.js</li>
                 <li>React</li>
               </ul>
             </p>
@@ -28,6 +27,7 @@ export default function Skills(props) {
               <li>C</li>
               <li>Python</li>
               <li>JAVA</li>
+              <li>Node.js</li>
             </ul>
           </div>
           <div className="col-span-12">
