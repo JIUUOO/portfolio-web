@@ -7,7 +7,7 @@ export default function Home(props) {
         <div className="grid grid-cols-12 m-10">
           <div className="col-span-12">
             <h1 className="text-3xl sm:text-5xl font-bold">
-              웹 백엔드 개발자 민지우입니다
+              웹 백엔드 개발자로 성장하는 민지우입니다
             </h1>
           </div>
           <div className="col-span-12">
