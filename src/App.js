@@ -9,23 +9,46 @@ import Footer from "./components/footer";
 const PAGE_COUNT = 3;
 
 function App() {
-  const { currSlide, setCurrSlide } = useContext(GlobalContext);
+  const { currSlide, setCurrSlide, userKey, setUserKey } =
+    useContext(GlobalContext);
 
-  const listener = async (e) => {
+  const clickListener = (e) => {
     // console.dir(e.srcElement.localName);
+
     // when user clicks a link, slide remains
     if (e.srcElement.localName !== "a") {
-      await setCurrSlide((currSlide + 1) % PAGE_COUNT);
+      setCurrSlide((currSlide + 1) % PAGE_COUNT);
     }
+  };
+
+  const keydownListener = (e) => {
+    if (userKey) {
+      if (e.key === "ArrowRight") {
+        setCurrSlide((currSlide + 1) % PAGE_COUNT);
+      }
+
+      if (e.key === "ArrowLeft") {
+        setCurrSlide((currSlide + (PAGE_COUNT - 1)) % PAGE_COUNT);
+      }
+      setUserKey(false);
+    }
+  };
+
+  const keyupListener = (e) => {
+    setUserKey(true);
   };
 
   useEffect(() => {
     // console.log(currSlide);
 
-    window.addEventListener("click", listener);
+    window.addEventListener("click", clickListener);
+    window.addEventListener("keydown", keydownListener);
+    window.addEventListener("keyup", keyupListener);
 
     return () => {
-      window.removeEventListener("click", listener);
+      window.removeEventListener("click", clickListener);
+      window.removeEventListener("keydown", keydownListener);
+      window.removeEventListener("keyup", keyupListener);
     };
   });
 

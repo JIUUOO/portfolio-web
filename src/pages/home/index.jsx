@@ -7,7 +7,7 @@ export default function Home(props) {
         <div className="grid grid-cols-12 m-10">
           <div className="col-span-12">
             <h1 className="text-3xl sm:text-5xl font-bold">
-              웹 백엔드 개발자 민지우입니다.
+              웹 백엔드 개발자 민지우입니다
             </h1>
           </div>
           <div className="col-span-12">
@@ -27,7 +27,7 @@ export default function Home(props) {
                   데이터 관리 근무 경험이 있습니다.
                 </li>
                 <li>
-                  (2024.03 ~) 👨‍🏫 로봇코딩 학원에서 C언어 및 Python 코칭을 하는
+                  (2024.03 ~) 👨‍🏫 코딩 학원에서 C언어 및 Python 코칭을 하는
                   보조교사로 근무하고 있습니다.
                 </li>
                 <li>
