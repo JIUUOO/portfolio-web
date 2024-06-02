@@ -1,5 +1,9 @@
 import { useContext } from "react";
 import { GlobalContext } from "../../context";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faKeyboard } from "@fortawesome/free-solid-svg-icons";
+
+// import { faKeyboard } from "@fortawesome";
 
 export default function Footer() {
   let hasTouchScreen = false;
@@ -9,7 +13,11 @@ export default function Footer() {
     hasTouchScreen = navigator.maxTouchPoints > 0;
   }
 
-  const onDesktopMessage = "";
+  const onDesktopMessage = (
+    <span>
+      <FontAwesomeIcon icon={faKeyboard} />로
+    </span>
+  );
   const onMobileMessage = "화면을 눌러";
 
   const { currSlide } = useContext(GlobalContext);

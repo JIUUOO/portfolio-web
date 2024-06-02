@@ -8,7 +8,7 @@ export default function Template({ slideNo, title, content, isEnd = false }) {
   return (
     <div className={currSlide === slideNo ? "" : "hidden"}>
       <div className={"flex place-content-center" + (isEnd ? " bg-black" : "")}>
-        <div className="flex flex-col place-content-between gap-10 min-h-screen p-16">
+        <div className="flex flex-col place-content-between gap-5 min-h-screen p-4">
           <div>
             <h1 className="text-3xl sm:text-4xl font-bold">{title}</h1>
           </div>

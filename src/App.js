@@ -19,7 +19,7 @@ function App() {
 
   // prevent perfoming continuous 'next slide'
   const keydownListener = (e) => {
-    console.log(e.key);
+    // console.log(e.key);
     if (userKey) {
       console.log();
       if (e.key === "ArrowRight" || e.key === " ") {
