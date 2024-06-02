@@ -3,7 +3,7 @@ import "./App.css";
 import { GlobalContext } from "./context";
 import Slides from "./page/slides";
 
-const TOTAL_PAGE = 3;
+const TOTAL_PAGE = 4;
 
 function App() {
   const { currSlide, setCurrSlide, userKey, setUserKey } =
@@ -19,17 +19,27 @@ function App() {
 
   // prevent perfoming continuous 'next slide'
   const keydownListener = (e) => {
+    console.log(e.key);
     if (userKey) {
-      if (e.key === "ArrowRight") {
+      console.log();
+      if (e.key === "ArrowRight" || e.key === " ") {
         setCurrSlide((currSlide + 1) % TOTAL_PAGE);
       }
 
       if (e.key === "ArrowLeft") {
         setCurrSlide((currSlide + (TOTAL_PAGE - 1)) % TOTAL_PAGE);
       }
+
       setUserKey(false);
     }
   };
+
+  // prevent spacebar scrolling
+  window.addEventListener("keydown", function (e) {
+    if (e.keyCode == 32 && e.target == document.body) {
+      e.preventDefault();
+    }
+  });
 
   const keyupListener = (e) => {
     setUserKey(true);

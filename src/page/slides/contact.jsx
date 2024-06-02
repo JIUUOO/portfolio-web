@@ -12,7 +12,7 @@ export default function Contact(props) {
   return (
     <Template
       slideNo={props.slideNo}
-      title="같이 소통해요"
+      title="꾸준히 성장하고 있습니다"
       content={
         <div>
           <ul>
@@ -37,11 +37,11 @@ export default function Contact(props) {
                 <FontAwesomeIcon icon={faYoutube} /> Youtube
               </a>
             </li>
-            <li className="py-1">
+            {/* <li className="py-1">
               <a href="mailto:nninjiuuoo@gmail.com" target="_blank">
                 <FontAwesomeIcon icon={faGoogle} /> Email
               </a>
-            </li>
+            </li> */}
           </ul>
         </div>
       }

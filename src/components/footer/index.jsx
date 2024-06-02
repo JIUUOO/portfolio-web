@@ -9,8 +9,8 @@ export default function Footer() {
     hasTouchScreen = navigator.maxTouchPoints > 0;
   }
 
-  const desktopMessage = "클릭하여";
-  const mobileMessage = "화면을 눌러";
+  const onDesktopMessage = "";
+  const onMobileMessage = "화면을 눌러";
 
   const { currSlide } = useContext(GlobalContext);
 
@@ -18,10 +18,10 @@ export default function Footer() {
     <div className="text-center">
       <p className="text-xs">
         <span className="block italic">
-          {hasTouchScreen ? mobileMessage : desktopMessage} 다음 슬라이드로
+          {hasTouchScreen ? onMobileMessage : onDesktopMessage} 다음 슬라이드로
           이동하세요
         </span>
-        <span className="block">{currSlide + 1}</span>
+        <span className="block pt-1">{currSlide + 1}</span>
       </p>
     </div>
   );
