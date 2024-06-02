@@ -1,15 +1,12 @@
-import Footer from "../../components/footer";
+import Template from "./template";
 
 export default function Skills(props) {
   return (
-    <div className={props.currSlide === 1 ? "" : "hidden"}>
-      <div className="flex justify-center w-screen h-screen">
-        <div className="grid grid-cols-12 m-10">
-          <div className="col-span-12">
-            <h1 className="text-3xl sm:text-5xl font-bold">
-              저는 이런 기술 스택을 보유하고 있어요
-            </h1>
-          </div>
+    <Template
+      slideNo={props.slideNo}
+      title="저는 이런 기술 스택을 보유하고 있습니다"
+      content={
+        <div>
           <div className="col-span-12">
             <h2 className="text-xl font-semibold">Front-End</h2>
             <p className="py-1">
@@ -39,9 +36,8 @@ export default function Skills(props) {
               <li>Arduino</li>
             </ul>
           </div>
-          <Footer />
         </div>
-      </div>
-    </div>
+      }
+    />
   );
 }

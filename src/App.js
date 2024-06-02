@@ -1,34 +1,31 @@
 import React, { useEffect, useContext } from "react";
 import "./App.css";
 import { GlobalContext } from "./context";
-import Home from "./pages/home";
-import Skills from "./pages/skills";
-import Contact from "./pages/contact";
-import Footer from "./components/footer";
+import Slides from "./page/slides";
 
-const PAGE_COUNT = 3;
+const TOTAL_PAGE = 3;
 
 function App() {
   const { currSlide, setCurrSlide, userKey, setUserKey } =
     useContext(GlobalContext);
 
   const clickListener = (e) => {
-    // console.dir(e.srcElement.localName);
-
-    // when user clicks a link, slide remains
+    // exception handling
+    // when user clicks a link, the slide remains
     if (e.srcElement.localName !== "a") {
-      setCurrSlide((currSlide + 1) % PAGE_COUNT);
+      setCurrSlide((currSlide + 1) % TOTAL_PAGE);
     }
   };
 
+  // prevent perfoming continuous 'next slide'
   const keydownListener = (e) => {
     if (userKey) {
       if (e.key === "ArrowRight") {
-        setCurrSlide((currSlide + 1) % PAGE_COUNT);
+        setCurrSlide((currSlide + 1) % TOTAL_PAGE);
       }
 
       if (e.key === "ArrowLeft") {
-        setCurrSlide((currSlide + (PAGE_COUNT - 1)) % PAGE_COUNT);
+        setCurrSlide((currSlide + (TOTAL_PAGE - 1)) % TOTAL_PAGE);
       }
       setUserKey(false);
     }
@@ -39,8 +36,6 @@ function App() {
   };
 
   useEffect(() => {
-    // console.log(currSlide);
-
     window.addEventListener("click", clickListener);
     window.addEventListener("keydown", keydownListener);
     window.addEventListener("keyup", keyupListener);
@@ -54,11 +49,7 @@ function App() {
 
   return (
     <React.StrictMode>
-      <div>
-        <Home currSlide={currSlide} />
-        <Skills currSlide={currSlide} />
-        <Contact currSlide={currSlide} />
-      </div>
+      <Slides />
     </React.StrictMode>
   );
 }

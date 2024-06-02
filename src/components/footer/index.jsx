@@ -4,6 +4,7 @@ import { GlobalContext } from "../../context";
 export default function Footer() {
   let hasTouchScreen = false;
 
+  // find out whether user's device is on mobile or desktop
   if ("maxTouchPoints" in navigator) {
     hasTouchScreen = navigator.maxTouchPoints > 0;
   }
@@ -14,12 +15,14 @@ export default function Footer() {
   const { currSlide } = useContext(GlobalContext);
 
   return (
-    <div className="col-span-12 text-center">
-      <p className="text-xs italic">
-        {hasTouchScreen ? mobileMessage : desktopMessage} 다음 슬라이드로
-        이동하세요
+    <div className="text-center">
+      <p className="text-xs">
+        <span className="block italic">
+          {hasTouchScreen ? mobileMessage : desktopMessage} 다음 슬라이드로
+          이동하세요
+        </span>
+        <span className="block">{currSlide + 1}</span>
       </p>
-      <p className="text-xs mt-2">{currSlide + 1}</p>
     </div>
   );
 }
