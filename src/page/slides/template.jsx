@@ -20,7 +20,7 @@ export default function Template({ slideNo, title, content, isEnd = false }) {
             <feTurbulence
               type="fractalNoise"
               baseFrequency={freq[currSlide]}
-              numOctaves="100"
+              numOctaves="3"
               stitchTiles="stitch"
             />
           </filter>
