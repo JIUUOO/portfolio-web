@@ -6,7 +6,6 @@ export default function Template({ slideNo, title, content, isEnd = false }) {
   const { currSlide } = useContext(GlobalContext);
   const freq = [0.1, 0.12, 0.05, 0.2];
   const opac = [0.11, 0.08, 0.06, 0.1];
-  console.log(freq[currSlide]);
 
   return (
     <div className={currSlide === slideNo ? "" : "hidden"}>
