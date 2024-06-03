@@ -1,12 +1,7 @@
-import { useContext } from "react";
-import { GlobalContext } from "../../context";
 import Intro from "./intro";
 import Skills from "./skills";
 import Contact from "./contact";
 import End from "./end";
-import Footer from "../../components/footer";
-
-import Template from "./template";
 
 export default function Slides() {
   return (
