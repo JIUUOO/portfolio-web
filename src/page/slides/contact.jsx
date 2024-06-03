@@ -18,7 +18,8 @@ export default function Contact(props) {
           <ul>
             <li className="py-1">
               <a href="https:github.com/JIUUOO" target="_blank">
-                <FontAwesomeIcon icon={faGithub} /> GitHub
+                <FontAwesomeIcon icon={faGithub} />{" "}
+                <span className="hover:underline">GitHub</span>
               </a>
             </li>
             <li className="py-1">
@@ -26,7 +27,8 @@ export default function Contact(props) {
                 href="https:linkedin.com/in/jiwoo-min-3836a6300"
                 target="_blank"
               >
-                <FontAwesomeIcon icon={faLinkedinIn} /> LinkedIn
+                <FontAwesomeIcon icon={faLinkedinIn} />{" "}
+                <span className="hover:underline">LinkedIn</span>
               </a>
             </li>
             <li className="py-1">
@@ -34,7 +36,8 @@ export default function Contact(props) {
                 href="https:youtube.com/@nninjiuuoo?si=hq_XSa7yhb7i7JRh"
                 target="_blank"
               >
-                <FontAwesomeIcon icon={faYoutube} /> Youtube
+                <FontAwesomeIcon icon={faYoutube} />{" "}
+                <span className="hover:underline">Youtube</span>
               </a>
             </li>
             {/* <li className="py-1">

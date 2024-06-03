@@ -6,7 +6,7 @@ export default function Skills(props) {
       slideNo={props.slideNo}
       title="저는 이런 기술 스택을 보유하고 있습니다"
       content={
-        <div className="grid md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           <div className="p-1">
             <h2 className="text-xl font-semibold">Front-End</h2>
             <ul className="list-disc list-inside">

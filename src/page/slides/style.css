@@ -1,4 +1,18 @@
 .screen {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   height: 88vh;
   max-width: 45rem;
+}
+
+.paper {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 100vw;
+  height: 100vh;
+
+  filter: grayscale(1);
 }

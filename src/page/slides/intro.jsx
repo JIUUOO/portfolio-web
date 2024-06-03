@@ -7,12 +7,12 @@ export default function Intro({ slideNo }) {
       title="웹 백엔드 개발자로 성장하는 민지우입니다"
       content={
         <div>
-          <h2 className="text-xl font-semibold">
+          <h2 className="text-xl font-semibold pb-4">
             저는 단 <span className="underline underline-offset-3">3가지</span>
             만 실천하여 성장하고 있습니다.
           </h2>
           <p>
-            <span className="block">
+            <span className="block pb-2">
               그것은 바로 <span className="font-extrabold">일</span>,{" "}
               <span className="font-extrabold">공부</span>,{" "}
               <span className="font-extrabold">운동</span>

@@ -26,7 +26,7 @@ export default function Footer() {
     <div className="text-center">
       <p className="text-xs">
         <span className="block italic">
-          {hasTouchScreen ? onMobileMessage : onDesktopMessage} 다음 슬라이드로
+          {hasTouchScreen ? onMobileMessage : onDesktopMessage} 슬라이드를
           이동하세요
         </span>
         <span className="block pt-1">{currSlide + 1}</span>
