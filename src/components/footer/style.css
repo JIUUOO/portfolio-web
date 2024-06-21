@@ -1,0 +1,30 @@
+.popup-active {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  justify-content: space-evenly;
+  padding: 5rem;
+}
+
+.popup-inactive {
+  display: none;
+}
+
+.popup__trigger:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.close-button {
+  cursor: pointer;
+}
+
+.text-shadow {
+  text-shadow: 1px 0 15px #fc0;
+}

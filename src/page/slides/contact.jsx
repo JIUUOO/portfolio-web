@@ -18,31 +18,34 @@ export default function Contact(props) {
             <li className="py-1">
               <a
                 href="https://github.com/JIUUOO"
+                className="hover:underline"
                 target="_blank"
                 rel="noreferrer"
               >
-                <FontAwesomeIcon icon={faGithub} />{" "}
-                <span className="hover:underline">GitHub</span>
+                <FontAwesomeIcon icon={faGithub} />
+                &nbsp;GitHub
               </a>
             </li>
             <li className="py-1">
               <a
                 href="https://linkedin.com/in/jiwoo-min-3836a6300"
                 target="_blank"
+                className="hover:underline"
                 rel="noreferrer"
               >
-                <FontAwesomeIcon icon={faLinkedinIn} />{" "}
-                <span className="hover:underline">LinkedIn</span>
+                <FontAwesomeIcon icon={faLinkedinIn} />
+                &nbsp;LinkedIn
               </a>
             </li>
             <li className="py-1">
               <a
                 href="https://youtube.com/@nninjiuuoo?si=hq_XSa7yhb7i7JRh"
+                className="hover:underline"
                 target="_blank"
                 rel="noreferrer"
               >
-                <FontAwesomeIcon icon={faYoutube} />{" "}
-                <span className="hover:underline">Youtube</span>
+                <FontAwesomeIcon icon={faYoutube} />
+                &nbsp;Youtube
               </a>
             </li>
             {/* <li className="py-1">

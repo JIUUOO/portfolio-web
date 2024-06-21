@@ -12,7 +12,12 @@ function App() {
   const clickListener = (e) => {
     // exception handling
     // when user clicks a link, the slide remains
-    if (e.srcElement.localName !== "a") {
+    console.log(e.srcElement.localName);
+    if (
+      e.srcElement.localName !== "a" &&
+      e.srcElement.localName !== "path" &&
+      e.srcElement.localName !== "svg"
+    ) {
       setCurrSlide((currSlide + 1) % TOTAL_PAGE);
     }
   };
